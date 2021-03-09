@@ -1,0 +1,12 @@
+/* 
+
+Algumas ideias: onde nasceu, onde mora, o que gosta de fazer nas horas livres, 
+antiga profissão  antes de querer ser uma pessoa desenvolvedora de software, 
+por que se interessa por tecnologia... Use a criatividade, mas não perca muito tempo rebuscando o texto, 
+pode ser algo beeem simples 😉
+
+*/
+
+nasci em São Paulo, moro em Botucatu-sp , gosto de treinar luta, fazer comida, tocar violão
+ja tive hamburgueria, já consertei celular, ja fui até 'programador wordpress', ja fui moto-taxi, minha ultima profissão foi professor de Muay Thai
+Quando trabalhei na agencia de publicidade, foi o melhor emprego que ja tive(Fora professor de muay thai, porem este n da dinheiro)
