@@ -64,6 +64,10 @@ table {
     text-align: center;
 }
 
+td img {
+    width: 50px;
+}
+
 
 /** 
   *
