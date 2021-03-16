@@ -143,3 +143,10 @@ td button:hover {
 #back-button:hover {
     background-color: #635a3d
 }
+
+.flex-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
