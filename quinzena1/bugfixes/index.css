@@ -81,6 +81,10 @@ td img {
     padding: 15px 0px;
 }
 
+ol {
+    list-style-type: decimal !important;
+}
+
 #container-para-comprar {
     background-color: #e7eb90;
 }
