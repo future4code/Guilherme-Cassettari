@@ -1,0 +1,13 @@
+@import "var/variables";
+@import "components/header";
+// -------------------------
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $primary-color;
+    font-family: $font;
+}
