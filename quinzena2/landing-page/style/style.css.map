@@ -4,7 +4,7 @@
     "sources": [
         "style.scss",
         "var/_variables.scss",
-        "components/_header.scss"
+        "components/_logo-master.scss"
     ],
     "names": [],
     "file": "style.css"
