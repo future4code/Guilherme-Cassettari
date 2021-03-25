@@ -1,0 +1,117 @@
+.screen-two {
+    @include flex(column, center, center);
+    background-color: $primary-color;
+    width: 100vw;
+}
+
+.logo-screen-two {
+    @include flex(row, flex-end, center);
+    width: 100vw;
+    padding: $margin-mobile;
+    margin-top: 34px;
+    margin-bottom: 42px;
+}
+
+.words-screen-two {
+    z-index: 5;
+    @include flex(column, center, center);
+    width: 90%;
+    h2 {
+        @include font-scren-two-mobile-emphasis();
+    }
+    .line-screen-two {
+        width: 75%;
+        border-bottom: $border-screen-two;
+        margin: 45px 0;
+    }
+    p {
+        @include font-subtitle-sceen-two-mobile();
+    }
+}
+
+.cards-area-screen-two {
+    @include flex(column, center, center);
+    width: 100vw;
+}
+
+.cards-screen-two {
+    margin-top: 34px;
+    @include flex(column, center, center);
+    background-color: $bg-color;
+    box-shadow: $shadow;
+    width: 80%;
+    height: 60vh;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 80%;
+        margin-bottom: 34px;
+    }
+    h3 {
+        @include font-emphasis-card-screen-two();
+    }
+    h4 {
+        margin-top: 10px;
+        @include font-card-screen-two();
+        margin-bottom: 34px;
+    }
+    &:nth-child(1) {
+        display: none
+    }
+}
+
+.screen-two-arrow-area {
+    @include flex(row, space-between, center);
+    width: 80%;
+    margin: 40px 0;
+}
+
+.balls-creen-two {
+    @include flex( row, space-between, center);
+    width: 20%;
+}
+
+.screen-two-ball {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $secondary-color;
+    &.active {
+        background-color: $line-on-white;
+    }
+}
+
+@media(min-width: 500px) {
+    .logo-screen-two {
+        margin-right: 174px;
+        margin-top: 84px;
+        padding: 0;
+    }
+    .words-screen-two {
+        h2 {
+            @include font-screen-tow-emphasis-desktop();
+        }
+        .line-screen-two {
+            width: 43%;
+        }
+        p {
+            @include font-subtitle-screen-two-desktop();
+        }
+    }
+    .cards-area-screen-two {
+        margin-top: 64px;
+        @include flex(row, center, center);
+        padding-bottom: 120px;
+    }
+    .cards-screen-two {
+        width: 43%;
+        &:nth-child(1) {
+            display: inherit;
+            margin-right: 1.4vw;
+        }
+        h3 {}
+    }
+    .screen-two-arrow-area {
+        display: none;
+    }
+}

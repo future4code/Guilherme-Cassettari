@@ -1,0 +1,97 @@
+.screen-one {
+    @include flex-column-center();
+}
+
+.box {
+    margin-top: 135px;
+    overflow-y: hidden;
+    @include flex-column-center();
+    h2 {
+        @include font-emphasis-mobile();
+    }
+    .line {
+        margin-top: 16px;
+        width: 328px;
+        border-bottom: 1px solid $line-on-white;
+    }
+    h3 {
+        margin-top: 36px;
+        @include font-mobile-screen-one();
+    }
+    button {
+        margin-top: 20px;
+        @include flex-column-center();
+        @include button-primary-color-mobile();
+    }
+}
+
+.img-phone {
+    margin-top: 22px;
+    width: 347px;
+    z-index: -50;
+    transform: translatey(4px);
+}
+
+@media(min-width: 501px) {
+    .screen-one {
+        @include grids();
+    }
+    .box-container {
+        @include flex-column-center();
+        height: 100vh;
+        grid-area: 1 / 1 / -1 / 10;
+        position: relative;
+        .box-bg {
+            position: absolute;
+            z-index: -1;
+            width: 250px;
+            height: 226px;
+            border: $border-back;
+            &.up-left {
+                left: 18%;
+                top: 28%;
+            }
+            &.up-right {
+                top: 27%;
+                right: 15%;
+            }
+            &.down-left {
+                bottom: 13%;
+                left: 16%;
+            }
+            &.down-right {
+                bottom: 12%;
+                right: 16%;
+            }
+        }
+    }
+    .img-container {
+        @include flex-end();
+        height: 100%;
+        flex-grow: 1;
+        grid-area: 1 / 9 / -1 / span 6;
+    }
+    .img-phone {
+        width: 80%;
+    }
+    .box {
+        @include flex(column, center, flex-start);
+        @include box-container();
+        padding: 0 5%;
+        width: 60%;
+        height: 55%;
+        h2 {
+            @include font-emphasis-desktop();
+        }
+        .line {
+            margin-top: 55px
+        }
+        h3 {
+            @include font-screen-one-desktop();
+        }
+        .screen-one-button {
+            @include flex-space-between-center();
+            width: 100%;
+        }
+    }
+}

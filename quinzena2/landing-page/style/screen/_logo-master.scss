@@ -1,0 +1,73 @@
+.logo-header {
+    @include flex-column-center();
+    @include font-style();
+    height: 100vh;
+    width: 100vw;
+    background-color: $primary-color;
+    transition: all 1s ease-in-out;
+    position: fixed;
+    z-index: 300;
+}
+
+.main-cubic-center {
+    width: 130px;
+    height: 130px;
+    stroke: $bg-color;
+    stroke-width: 4;
+    stroke-dasharray: 519.99;
+    stroke-dashoffset: 519.99;
+    transition: all 1s ease-in .2s;
+}
+
+.main-cubic-right-up,
+.main-cubic-right-down {
+    width: 59px;
+    height: 59px;
+    stroke: $bg-color;
+    stroke-width: 4;
+    stroke-dasharray: 235.99;
+    stroke-dashoffset: -235.99;
+    transition: all .7s ease-in;
+}
+
+.main-cubic-left-up,
+.main-cubic-left-down {
+    width: 59px;
+    height: 59px;
+    stroke: $bg-color;
+    stroke-width: 4;
+    stroke-dasharray: 235.99;
+    stroke-dashoffset: 235.99;
+    transition: all .7s ease-in;
+}
+
+.show {
+    stroke-dashoffset: 0;
+}
+
+.main-logo-word {
+    margin: 50px 0 10px 0;
+    font-size: 52px;
+    opacity: 0;
+    transform: scale(0);
+    transition: all .7s $bounce-bezier;
+}
+
+.sub-main-logo-word {
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    opacity: 0;
+    transform: scale(0);
+    transition: all .5s $bounce-bezier;
+}
+
+.word-active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.opacity {
+    opacity: 0;
+    pointer-events: none;
+}

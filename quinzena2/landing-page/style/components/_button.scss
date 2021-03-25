@@ -1,0 +1,13 @@
+@mixin button-primary-color-mobile() {
+    width: 260px;
+    height: 60px;
+    background-color: $primary-color;
+    border: none;
+    color: $third-color;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height */
+    letter-spacing: 0.1em;
+}

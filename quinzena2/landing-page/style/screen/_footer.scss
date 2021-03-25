@@ -1,0 +1,28 @@
+footer {
+    @include flex(column-reverse, space-between, center);
+    background-color: $primary-color;
+    height: 97vh;
+    color: $bg-color;
+    padding-top: 13.6vh;
+    .footer-content {
+        @include flex( column-reverse, space-between, center);
+        margin-top: 15.84vh;
+        flex-grow: 1;
+    }
+    .footer-media-icons {
+        @include flex(row, space-between, center);
+    }
+    .footer-line {
+        margin: 1.2vh 0;
+        border: $border;
+    }
+    .footer-title {
+        @include flex(column, center, center);
+        h3 {
+            @include font-footer-small();
+        }
+        h2 {
+            padding: 1.86vh 0 2.34vh 0;
+        }
+    }
+}

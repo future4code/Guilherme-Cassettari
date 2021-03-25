@@ -1,20 +1,17 @@
-export function getAllEl(element) {
-    const el = document.querySelectorAll(element)
-}
+// Pegando os Elementos
+export const getAllEl = element => document.querySelectorAll(element)
 
-export function getOneEl(element) {
-    const el = document.querySelector(element)
-    return el
-}
+export const getOneEl = element => document.querySelector(element)
 
-export function addClassActive(element) {
-    element.classList.add('active')
-}
+// Dando e tirando class active
+export const addClassActive = element => element.classList.add('active')
 
-export function removeClassActive(element) {
-    element.classList.remove('active')
-}
+export const removeClassActive = element => element.classList.remove('active')
 
-export function toggleClassActive(element) {
-    element.classList.toggle('active')
-}
+export const toggleClassActive = element => element.classList.toggle('active')
+
+
+// Dando e tirando qualquer Classe
+export const addClass = (element, className) => element.classList.add(className)
+
+export const removeClass = (element, className) => element.classList.remove(className)
