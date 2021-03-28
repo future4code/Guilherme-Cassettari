@@ -1,5 +1,5 @@
 .screen-two {
-    @include flex(column, center, center);
+    @include flex(column, center, normal);
     background-color: $primary-color;
     width: 100vw;
 }
@@ -8,6 +8,7 @@
     @include flex(row, flex-end, center);
     width: 100vw;
     padding: $margin-mobile;
+    margin-left: -10vw;
     margin-top: 34px;
     margin-bottom: 42px;
 }
@@ -35,25 +36,45 @@
 }
 
 .cards-screen-two {
-    margin-top: 34px;
-    @include flex(column, center, center);
+    .bg-screen-two {
+        width: 100%;
+        height: 100%;
+        // z-index: -2;
+    }
     background-color: $bg-color;
+    margin-top: 34px;
+    @include flex(column, flex-end, center);
     box-shadow: $shadow;
+    position: relative;
     width: 80%;
     height: 60vh;
     overflow: hidden;
-    img {
+    z-index: 10;
+    .card-screen-two-box {
+        @include flex(column, space-evenly, center);
         width: 100%;
-        height: 80%;
+        background-color: $bg-color;
+        z-index: 5;
+        height: 25%;
+    }
+    .card-screen-two-container-img {
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    img {
         margin-bottom: 34px;
     }
     h3 {
         @include font-emphasis-card-screen-two();
+        z-index: 2;
     }
     h4 {
-        margin-top: 10px;
+        // margin-top: 10px;
         @include font-card-screen-two();
-        margin-bottom: 34px;
+        // margin-bottom: 34px;
+        z-index: 2;
     }
     &:nth-child(1) {
         display: none

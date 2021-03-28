@@ -4,45 +4,111 @@
 }
 
 .screen-three-card {
+    z-index: 10;
     height: 100vh;
     width: 100%;
     position: relative;
-    display: flex;
-    flex-direction: column;
+    @include flex(column, center, flex-start);
+    @include transition();
     .screen-three-container-image {
-        padding-top: 11vh;
+        top: 11vh;
+        // padding-top: 11vh;
         height: 37vh;
         width: 90%;
         overflow: hidden;
         position: absolute;
         z-index: 1;
         align-self: center;
+        .screen-three-box-img {
+            position: relative;
+            img {
+                position: absolute;
+            }
+        }
+        .screenThreeCardOneImg {
+            @include transition();
+            opacity: 0;
+            &.active {
+                opacity: 1
+            }
+        }
+    }
+    .box-bg {
+        @include box-back();
+        @include transition();
+        position: absolute;
+        z-index: 2;
+        width: 20%;
+        height: 30%;
+        &.up-left {
+            top: 15%;
+            left: 35%;
+        }
+        &.up-right {
+            top: 15%;
+            right: 10%
+        }
+        &.down-left {
+            bottom: 15%;
+            left: 34.5%;
+        }
+        &.down-right {
+            bottom: 14%;
+            right: 11%;
+        }
     }
     .screen-three-box {
         @include flex(column, space-between, center);
         @include box-container();
+        @include transition();
+        position: absolute;
+        padding-top: 10%;
         height: 58vh;
         margin-top: 18vh;
         margin: 20vh 8vw 0 8vw;
         padding-top: 3vh;
         z-index: 2;
+        width: 90%;
         .screen-trhee-card-box-title {
-            @include flex(column, center, center);
+            @include flex(column, space-evenly, flex-start);
+            position: relative;
+            width: 100%;
+            height: 50%
         }
         .screen-three-card-title {
             @include font-emphasis-mobile();
+            @include transition();
+            position: absolute;
             font-weight: normal;
+            opacity: 0;
+            &.active {
+                opacity: 1;
+            }
         }
         .screen-three-card-line {
             margin-top: 3vh;
+            height: 50%;
             width: 60%;
             border-bottom: $border;
         }
+        .screen-three-cards-container {
+            @include flex( column, space-evenly, flex-start);
+            position: relative;
+            width: 100%;
+            height: 100%
+        }
         .screen-three-card-p {
+            @include flex(row, center, center);
             @include font-card-screen-two();
+            @include transition();
+            position: absolute;
             color: $primary-color;
             text-align: left;
             width: 80%;
+            opacity: 0;
+            &.active {
+                opacity: 1
+            }
         }
         .screen-three-card-scrool {
             @include flex(row, space-between, center);
@@ -54,6 +120,7 @@
             .card-balls {
                 padding: 0 1vw;
                 svg {
+                    @include transition();
                     fill: $secondary-color;
                     fill-opacity: 0.5;
                     width: 14px;
@@ -64,10 +131,22 @@
                 svg {
                     fill: $primary-color;
                     fill-opacity: 1;
+                    transform: scale(1.15);
                 }
             }
         }
     }
+}
+
+.screen-three-card-arrow-right,
+.screen-three-card-arrow-left {
+    transition: all .3s ease-in-out;
+}
+
+.screen-three-card-arrow-right:hover,
+.screen-three-card-arrow-left:hover {
+    cursor: pointer;
+    transform: scale(1.5);
 }
 
 @media(min-width: 501px) {
@@ -83,6 +162,7 @@
             }
         }
         .screen-three-container-image {
+            // transform: translateY(100px);
             grid-area: 1 / 2 / -1 /span 5;
             width: 100%;
             height: 75vh;

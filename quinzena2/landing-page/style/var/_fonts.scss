@@ -104,3 +104,10 @@ monospace;
     letter-spacing: 0.1em;
     color: $secondary-color;
 }
+
+@mixin font-footer-myname() {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 53px;
+    letter-spacing: 0.1em;
+}

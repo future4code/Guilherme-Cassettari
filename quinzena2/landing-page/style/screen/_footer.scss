@@ -26,3 +26,33 @@ footer {
         }
     }
 }
+
+@media(min-width:501px) {
+    footer {
+        margin: 0;
+        padding-top: 0;
+        @include grids();
+        height: 50.3vh;
+        .footer-content {
+            @include flex(column, space-between, flex-start);
+            margin: 0;
+            padding: 5.07vh 0 6.738vh;
+            height: 100%;
+            grid-area: 1 / 2 / -1 / span 7;
+        }
+        .footer-logo {
+            @include flex(row, flex-end, center);
+            grid-area: 1 / 11 / -1 / span 3;
+        }
+        .footer-title {
+            @include flex(column, space-between, flex-start);
+            h3 {
+                @include font-card-screen-three-emphasis();
+            }
+            h2 {
+                padding-top: 3vh;
+                @include font-footer-myname();
+            }
+        }
+    }
+}
