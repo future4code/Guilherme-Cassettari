@@ -1,0 +1,113 @@
+// Fonts
+$font: 'Roboto Mono',
+monospace;
+@mixin font-style() {
+    font-family: $font;
+    color: $third-color;
+}
+
+@mixin font-emphasis-mobile() {
+    color: $primary-color;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height */
+    letter-spacing: 0.1em;
+}
+
+@mixin font-mobile-screen-one() {
+    color: $primary-color;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+}
+
+@mixin font-emphasis-desktop() {
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 74px;
+    letter-spacing: 0.1em;
+    color: $primary-color;
+}
+
+@mixin font-screen-one-desktop() {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.1em;
+    color: $primary-color;
+}
+
+@mixin font-scren-two-mobile-emphasis() {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: $third-color;
+}
+
+@mixin font-screen-tow-emphasis-desktop() {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 24px;
+}
+
+@mixin font-subtitle-sceen-two-mobile() {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.3em;
+    color: $secondary-color;
+}
+
+@mixin font-subtitle-screen-two-desktop() {
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.3em;
+}
+
+@mixin font-emphasis-card-screen-two() {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.3em;
+    color: $primary-color;
+}
+
+@mixin font-card-screen-two() {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.3em;
+    color: $secondary-color;
+    text-align: center;
+}
+
+@mixin font-card-screen-three-emphasis() {
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: 0.1em;
+}
+
+@mixin font-footer-small() {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    color: $secondary-color;
+}
+
+@mixin font-footer-myname() {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 53px;
+    letter-spacing: 0.1em;
+}

@@ -1,0 +1,10 @@
+@mixin box-container() {
+    border: $border;
+    background-color: $bg-color;
+    padding: 0 5%;
+}
+
+@mixin box-back() {
+    border: $border;
+    background-color: $bg-color-transparent;
+}

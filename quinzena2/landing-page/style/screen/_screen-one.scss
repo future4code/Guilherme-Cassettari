@@ -1,0 +1,125 @@
+.screen-one {
+    @include flex-column-center();
+    .img-container {
+        z-index: -1;
+    }
+}
+
+.box-container {
+    @include animation-enter();
+    overflow-y: hidden;
+    z-index: 10;
+}
+
+.box {
+    margin-top: 135px;
+    overflow-y: hidden;
+    // background-color: $bg-color;
+    @include flex(column, center, center);
+    h2 {
+        @include font-emphasis-mobile();
+        @include animation-enter();
+    }
+    .line {
+        margin-top: 16px;
+        width: 328px;
+        border-bottom: 1px solid $line-on-white;
+        @include animation-enter();
+    }
+    h3 {
+        margin-top: 36px;
+        @include font-mobile-screen-one();
+        @include animation-enter();
+    }
+    button {
+        margin-top: 20px;
+        @include flex(row, center, center);
+        @include button-primary-color-mobile();
+        @include animation-enter();
+    }
+}
+
+.img-phone {
+    margin-top: 22px;
+    width: 347px;
+    z-index: -50;
+    transform: translatey(4px);
+    opacity: 0;
+    transform: translateX(15vh);
+    transition: all .5s $bounce-bezier;
+    &.active {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+}
+
+@media(min-width: 501px) {
+    .screen-one {
+        @include grids();
+    }
+    .box-container {
+        @include flex-column-center();
+        z-index: 3;
+        height: 100vh;
+        grid-area: 1 / 1 / -1 / 10;
+        position: relative;
+        .box-bg {
+            position: absolute;
+            z-index: -1;
+            width: 250px;
+            height: 226px;
+            border: $border-back;
+            &.up-left {
+                left: 18%;
+                top: 28%;
+            }
+            &.up-right {
+                top: 27%;
+                right: 15%;
+            }
+            &.down-left {
+                bottom: 13%;
+                left: 16%;
+            }
+            &.down-right {
+                bottom: 12%;
+                right: 16%;
+            }
+        }
+    }
+    .img-container {
+        @include flex-end();
+        height: 100%;
+        flex-grow: 1;
+        grid-area: 1 / 9 / -1 / span 6;
+    }
+    .img-phone {
+        width: 28vw;
+    }
+    .box {
+        @include flex(column, center, flex-start);
+        @include box-container();
+        padding: 0 5%;
+        width: 60%;
+        height: 55%;
+        h2 {
+            @include font-emphasis-desktop();
+        }
+        .line {
+            margin-top: 55px
+        }
+        h3 {
+            @include font-screen-one-desktop();
+        }
+        .screen-one-button {
+            @include flex-space-between-center();
+            button {
+                @include transition();
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+            width: 100%;
+        }
+    }
+}
