@@ -132,7 +132,7 @@ function ordenaArray(array) {
 
    // Pegando o menor numero
    for (let index = 0; index <= lengthArray; index++) {
-      if (array[index] < minorNumber){
+      if (array[index] < minorNumber){ 
          minorNumber = array[index]
       }
    }
