@@ -123,19 +123,45 @@ function segundoMaiorEMenor(array) {
 //Exercício 11
 
 function ordenaArray(array) {
-   // Escreva uma função que recebe um array e retorne um array com eles em ordem crescente.
 
-   // console.log(array)
-   // for (let i = 0; i <= array.length; i++) {
-   //    for (arrays of array) {
-   //       if (arrays > major) {
-   //          major = arrays
-   //       }
-   //       if (arrays < minor) {
-   //          minor = arrays
-   //       }
-   //    }
-   // }
+   let finalArray = []   
+   let i
+   let current = array
+   let lengthArray = array.length
+   let minorNumber = array[0]
+
+   // Pegando o menor numero
+   for (let index = 0; index <= lengthArray; index++) {
+      if (array[index] < minorNumber){
+         minorNumber = array[index]
+      }
+   }
+
+   let major = minorNumber
+
+   // Percorrendo o array e tirando o maior numero
+   do {  
+
+      //Descobrindo o maior numero
+      for (let index = 0; index <= lengthArray; index++) {
+
+         if (current[index] > major) {
+            major = current[index]
+            i = index
+         }else if(current[index] === major){
+            major = current[index]
+            i = index
+         }
+      }
+
+      finalArray.unshift(major)
+      current.splice(i, 1)
+      lengthArray--
+      major = minorNumber
+
+   }while (lengthArray != 0)
+
+   return finalArray
 }
 
 // Exercício 12
@@ -314,7 +340,7 @@ function retornaEmailConsulta(consultas) {
    // tive que apagar o parametro por causa de erro
    // e-mail está escrito errado 
 
-   const msgOk = (element) => {      
+   const msgOk = (element) => {
       return `Olá, ${element.genero === 'masculino' ? 'Sr' : 'Sra'}. ${element.nome}. Infelizmente sua consulta marcada para o dia ${element.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la.`
    }
 
@@ -343,10 +369,10 @@ const contas = [
 ]
 
 function atualizaSaldo() {
-   for(conta of contas){
+   for (conta of contas) {
       let totalCompra = 0
       conta.compras.map((e) => totalCompra += e)
-      conta.saldoTotal -= totalCompra      
+      conta.saldoTotal -= totalCompra
    }
    return contas
 }
